@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
+import './css/App.css';
+
+// Components
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Services from './components/Services';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 import HireMeModal from './components/HireMeModal';
 import ResumeModal from './components/ResumeModal';
+
+// Pages / Sections
+import Hero from './pages/Hero';
+import Services from './pages/Services';
+import About from './pages/About';
+import Skills from './pages/Skills';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
 
 function App() {
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);

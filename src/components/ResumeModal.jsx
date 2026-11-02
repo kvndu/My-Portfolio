@@ -1,7 +1,7 @@
 import React from 'react';
-import { X, Download, ExternalLink, FileText, CheckCircle2, Printer } from 'lucide-react';
+import { X, Download, FileText, Printer } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
-import './ResumeModal.css';
+import '../css/ResumeModal.css';
 
 export default function ResumeModal({ isOpen, onClose }) {
   if (!isOpen) return null;

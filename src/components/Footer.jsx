@@ -1,8 +1,10 @@
 import React from 'react';
-import { ArrowUp, Heart } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, InstagramIcon, LeetCodeIcon } from './SocialIcons';
 import { portfolioData } from '../data/portfolioData';
-import './Footer.css';
+import '../css/Footer.css';
+
+const currentYear = new Date().getFullYear();
 
 export default function Footer() {
   const { personal } = portfolioData;
@@ -66,7 +68,7 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <p className="copyright-text">
-            © {new Date().getFullYear()} Kavindu Heshan. All rights reserved.
+            © {currentYear} Kavindu Heshan. All rights reserved.
           </p>
 
           <button onClick={scrollToTop} className="back-to-top-btn" title="Back to Top">

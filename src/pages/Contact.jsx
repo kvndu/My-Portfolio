@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
 import { 
   Mail, 
-  Phone, 
   MapPin, 
   Send, 
   CheckCircle2, 
   MessageSquare, 
   Clock, 
-  Sparkles,
   ArrowRight
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { portfolioData } from '../data/portfolioData';
-import './Contact.css';
+import '../css/Contact.css';
 
 export default function Contact() {
   const { personal } = portfolioData;

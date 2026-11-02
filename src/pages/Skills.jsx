@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Code2, Server, Database, Cloud, Terminal, Cpu } from 'lucide-react';
+import { Code2, Server, Database, Cloud } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
-import './Skills.css';
+import '../css/Skills.css';
 
 export default function Skills() {
   const { skills } = portfolioData;

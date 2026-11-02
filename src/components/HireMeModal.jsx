@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import { X, Sparkles, Send, CheckCircle2, MessageSquare, ArrowRight } from 'lucide-react';
+import { X, Sparkles, Send, CheckCircle2, MessageSquare } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { portfolioData } from '../data/portfolioData';
-import './HireMeModal.css';
+import '../css/HireMeModal.css';
 
 export default function HireMeModal({ isOpen, onClose, preselectedService }) {
-  if (!isOpen) return null;
-
   const { personal } = portfolioData;
   const [clientType, setClientType] = useState('project'); // 'project' or 'fulltime'
   const [budget, setBudget] = useState('$1,000 - $3,000');
@@ -18,6 +16,8 @@ export default function HireMeModal({ isOpen, onClose, preselectedService }) {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+
+  if (!isOpen) return null;
 
   const handleSubmit = (e) => {
     e.preventDefault();

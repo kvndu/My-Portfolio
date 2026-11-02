@@ -1,22 +1,16 @@
 import React from 'react';
 import { 
-  Award, 
   BookOpen, 
   Briefcase, 
   CheckCircle, 
-  Code, 
-  Compass, 
-  Cpu, 
-  Download, 
-  MapPin, 
-  User 
+  Download 
 } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 import kavinduPortrait from '../assets/kavindu-portrait.jpg';
-import './About.css';
+import '../css/About.css';
 
-export default function About({ onDownloadCV, onOpenHireModal }) {
-  const { about, personal, experience, education } = portfolioData;
+export default function About({ onDownloadCV }) {
+  const { about, experience, education } = portfolioData;
 
   return (
     <section id="about" className="about-section section-padding">

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { ExternalLink, Layers, ArrowUpRight, CheckCircle2, X } from 'lucide-react';
-import { GithubIcon } from './SocialIcons';
+import { ExternalLink, ArrowUpRight, CheckCircle2, X } from 'lucide-react';
+import { GithubIcon } from '../components/SocialIcons';
 import { portfolioData } from '../data/portfolioData';
-import './Projects.css';
+import '../css/Projects.css';
 
 export default function Projects() {
   const { projects } = portfolioData;

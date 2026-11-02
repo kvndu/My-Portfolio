@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Sparkles } from 'lucide-react';
-import './Navbar.css';
+import '../css/Navbar.css';
 
 export default function Navbar({ onOpenHireModal }) {
   const [isScrolled, setIsScrolled] = useState(false);

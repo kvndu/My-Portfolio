@@ -1,7 +1,7 @@
 import React from 'react';
 import { Layers, Server, Database, Cpu, CheckCircle2, ArrowRight } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
-import './Services.css';
+import '../css/Services.css';
 
 export default function Services({ onSelectService }) {
   const { services } = portfolioData;

@@ -3,15 +3,12 @@ import {
   Globe, 
   Download, 
   ArrowRight, 
-  Terminal, 
-  Sparkles,
-  Layers,
-  CheckCircle2
+  Terminal
 } from 'lucide-react';
-import { GithubIcon, LinkedinIcon, InstagramIcon, LeetCodeIcon } from './SocialIcons';
+import { GithubIcon, LinkedinIcon, InstagramIcon, LeetCodeIcon } from '../components/SocialIcons';
 import confetti from 'canvas-confetti';
 import { portfolioData } from '../data/portfolioData';
-import './Hero.css';
+import '../css/Hero.css';
 
 // Import local photos generated
 import kavinduStudio from '../assets/kavindu-studio.png';
