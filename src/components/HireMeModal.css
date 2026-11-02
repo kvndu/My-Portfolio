@@ -1,0 +1,264 @@
+/* ==========================================================================
+   HIRE ME MODAL STYLING
+   ========================================================================== */
+
+.hire-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2500;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.hire-modal-dialog {
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #16161d;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 38px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.85);
+  animation: hire-zoom-in 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes hire-zoom-in {
+  from { opacity: 0; transform: scale(0.94); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.hire-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.hire-modal-close:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: rotate(90deg);
+}
+
+.hire-modal-header {
+  margin-bottom: 24px;
+}
+
+.hire-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(255, 94, 20, 0.12);
+  border: 1px solid rgba(255, 94, 20, 0.3);
+  color: var(--accent-orange);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.hire-modal-title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.hire-modal-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Engagement Switcher */
+.engagement-switcher {
+  display: flex;
+  background: #1c1c25;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 4px;
+  margin-bottom: 24px;
+  gap: 4px;
+}
+
+.eng-btn {
+  flex: 1;
+  padding: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #8c8c95;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.eng-btn.active {
+  background: var(--accent-orange);
+  color: #ffffff;
+  box-shadow: 0 2px 10px rgba(255, 94, 20, 0.35);
+}
+
+/* Form Fields */
+.hire-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.hire-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.hire-field label {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #c0c0ca;
+}
+
+.hire-field input, .hire-field select, .hire-field textarea {
+  width: 100%;
+  background: #1d1d27;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  transition: all 0.2s ease;
+}
+
+.hire-field input:focus, .hire-field select:focus, .hire-field textarea:focus {
+  outline: none;
+  border-color: var(--accent-orange);
+  box-shadow: 0 0 0 3px rgba(255, 94, 20, 0.2);
+}
+
+.budget-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.budget-chip {
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: #1d1d27;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #b0b0b8;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.budget-chip:hover {
+  border-color: rgba(255, 94, 20, 0.3);
+  color: #ffffff;
+}
+
+.budget-chip.active {
+  background: rgba(255, 94, 20, 0.18);
+  border-color: var(--accent-orange);
+  color: var(--accent-orange);
+}
+
+.hire-submit-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 10px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.hire-submit-btn {
+  padding: 13px 30px;
+}
+
+.hire-privacy-text {
+  font-size: 0.78rem;
+  color: #7d7e86;
+}
+
+/* Success View */
+.hire-success-content {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.hire-success-icon {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: rgba(255, 94, 20, 0.15);
+  color: var(--accent-orange);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.hire-success-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.hire-success-desc {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 480px;
+  margin: 0 auto 28px;
+}
+
+.hire-success-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .hire-modal-dialog {
+    padding: 24px 18px;
+  }
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+  .hire-submit-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hire-submit-btn {
+    width: 100%;
+  }
+  .hire-success-actions {
+    flex-direction: column;
+  }
+}

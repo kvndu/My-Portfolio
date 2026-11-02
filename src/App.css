@@ -1,0 +1,13 @@
+/* Top-level application layout */
+.portfolio-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-main);
+  position: relative;
+  overflow-x: hidden;
+}
+
+main {
+  flex: 1;
+}
