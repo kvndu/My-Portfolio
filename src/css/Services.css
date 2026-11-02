@@ -4,8 +4,9 @@
 
 .services-section {
   position: relative;
-  background: #0f0f13;
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  background: rgba(15, 15, 20, 0.55);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .services-grid {

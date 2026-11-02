@@ -16,44 +16,54 @@ export default function ResumeModal({ isOpen, onClose }) {
     // Generate a clean text / markdown resume file for download
     const cvContent = `
 ============================================================
-${personal.name.toUpperCase()} - ${personal.role.toUpperCase()}
+${(personal.fullName || personal.name).toUpperCase()}
+BSc (Hons) Software Engineering Graduate • University of Plymouth
 ============================================================
 Email: ${personal.email}
 Phone: ${personal.phone}
 Location: ${personal.location}
-LinkedIn: ${personal.socials.find(s => s.name === 'LinkedIn')?.url}
-GitHub: ${personal.socials.find(s => s.name === 'GitHub')?.url}
+LinkedIn: ${personal.socials.find(s => s.name === 'LinkedIn')?.url || ''}
+GitHub: ${personal.socials.find(s => s.name === 'GitHub')?.url || ''}
 
-SUMMARY
+CAREER OBJECTIVE
 ------------------------------------------------------------
 ${personal.tagline}
 
-PROFESSIONAL EXPERIENCE
+EDUCATION & QUALIFICATIONS
+------------------------------------------------------------
+* ${education[0].degree}
+  ${education[0].institution} (${education[0].year})
+  Awarded: ${education[0].classification || education[0].achievement}
+  Programme Aggregate: 57.35% | Total Credits: 360 (Completed)
+
+  Notable Modules & Achievements:
+  - Final Year Computing Project (PUSL3190): 71% Coursework Report & Code (66.2% overall)
+  - Computing Group Project (PUSL2021): 75% Coursework Portfolio (72% overall)
+  - Mobile App Development (PUSL2023): 65.58% (Proposal: 76%, Final Report: 70%)
+  - Software Engineering 2 (PUSL2024): 74% Coursework & Practical
+  - Full-Stack Development (PUSL3120): Level 6 Confirmed
+  - HCI, Graphics & Visualisation (PUSL3122): 65% Coursework
+
+ACADEMIC & PROJECT EXPERIENCE
 ------------------------------------------------------------
 ${experience.map(e => `* ${e.role} | ${e.company} (${e.period})
   - ${e.description}
   - Tech Stack: ${e.tech.join(', ')}
 `).join('\n')}
 
-EDUCATION
-------------------------------------------------------------
-* ${education[0].degree}
-  ${education[0].institution} (${education[0].year})
-  ${education[0].achievement}
-
-KEY TECHNICAL SKILLS
+TECHNICAL EXPERTISE
 ------------------------------------------------------------
 * Frontend: ${skills.frontend.map(s => s.name).join(', ')}
 * Backend: ${skills.backend.map(s => s.name).join(', ')}
-* Databases & Cache: ${skills.database.map(s => s.name).join(', ')}
-* DevOps & Cloud: ${skills.devops.map(s => s.name).join(', ')}
+* Databases: ${skills.database.map(s => s.name).join(', ')}
+* DevOps & Tools: ${skills.devops.map(s => s.name).join(', ')}
 ============================================================
 `;
     const blob = new Blob([cvContent.trim()], { type: 'text/plain;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `Kavindu_Heshan_Software_Engineer_Resume.txt`;
+    link.download = `Kavindu_Heshan_Software_Engineering_Graduate_Resume.txt`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -68,7 +78,7 @@ KEY TECHNICAL SKILLS
             <FileText size={22} className="resume-icon" />
             <div>
               <h3 className="resume-modal-title">Kavindu Heshan — Resume</h3>
-              <span className="resume-modal-subtitle">Software Engineer • Official Profile</span>
+              <span className="resume-modal-subtitle">BSc (Hons) Software Engineering Graduate • Official Profile</span>
             </div>
           </div>
 
@@ -90,8 +100,8 @@ KEY TECHNICAL SKILLS
         {/* Printable/Readable Document Preview */}
         <div className="resume-document-sheet">
           <div className="sheet-header">
-            <h1 className="sheet-name">{personal.name}</h1>
-            <h2 className="sheet-role">{personal.role}</h2>
+            <h1 className="sheet-name">{personal.fullName || personal.name}</h1>
+            <h2 className="sheet-role">{personal.role} • University of Plymouth</h2>
             <div className="sheet-contact-line">
               <span>{personal.email}</span> • 
               <span>{personal.phone}</span> • 
@@ -102,12 +112,28 @@ KEY TECHNICAL SKILLS
           <hr className="sheet-divider" />
 
           <section className="sheet-section">
-            <h3 className="sheet-section-title">Professional Summary</h3>
+            <h3 className="sheet-section-title">Career Objective</h3>
             <p className="sheet-text">{personal.tagline}</p>
           </section>
 
           <section className="sheet-section">
-            <h3 className="sheet-section-title">Work Experience</h3>
+            <h3 className="sheet-section-title">Education & Qualifications</h3>
+            <div className="sheet-exp-row">
+              <span className="sheet-exp-role">{education[0].degree} — <strong>{education[0].institution}</strong></span>
+              <span className="sheet-exp-period">{education[0].year}</span>
+            </div>
+            <p className="sheet-exp-desc">
+              <strong>Awarded:</strong> {education[0].classification || education[0].achievement} (Aggregate: {education[0].aggregate || '57.35%'}, {education[0].totalCredits || '360 Credits Completed'})
+            </p>
+            {education[0].notableModules && (
+              <p className="sheet-exp-tech" style={{ marginTop: '6px' }}>
+                <strong>Key Modules:</strong> {education[0].notableModules.join(' • ')}
+              </p>
+            )}
+          </section>
+
+          <section className="sheet-section">
+            <h3 className="sheet-section-title">Academic & Project Experience</h3>
             {experience.map((exp, idx) => (
               <div key={idx} className="sheet-exp-item">
                 <div className="sheet-exp-row">
@@ -121,21 +147,11 @@ KEY TECHNICAL SKILLS
           </section>
 
           <section className="sheet-section">
-            <h3 className="sheet-section-title">Education</h3>
-            <div className="sheet-exp-row">
-              <span className="sheet-exp-role">{education[0].degree}</span>
-              <span className="sheet-exp-period">{education[0].year}</span>
-            </div>
-            <p className="sheet-exp-desc">{education[0].institution}</p>
-            <p className="sheet-exp-tech"><em>{education[0].achievement}</em></p>
-          </section>
-
-          <section className="sheet-section">
             <h3 className="sheet-section-title">Technical Expertise</h3>
             <div className="sheet-skills-list">
-              <p><strong>Languages & Frontend:</strong> React, Next.js, TypeScript, JavaScript (ES6+), HTML5/CSS3, Tailwind</p>
-              <p><strong>Backend & Systems:</strong> Node.js, Express.js, NestJS, Python, REST APIs, Microservices, GraphQL</p>
-              <p><strong>Databases & Cloud:</strong> PostgreSQL, MongoDB, Redis, Docker, AWS, Git, CI/CD</p>
+              <p><strong>Languages & Frontend:</strong> React.js, JavaScript (ES6+), TypeScript, HTML5/CSS3, Tailwind CSS</p>
+              <p><strong>Backend & APIs:</strong> Node.js, Express.js, RESTful APIs, Python Basics, Java (OOP)</p>
+              <p><strong>Databases & Tools:</strong> PostgreSQL, MySQL, MongoDB, Git & GitHub, Docker Basics, Postman, Agile/Scrum</p>
             </div>
           </section>
         </div>

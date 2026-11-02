@@ -1,23 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
   Globe, 
   Download, 
-  ArrowRight, 
-  Terminal
+  ArrowRight
 } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, InstagramIcon, LeetCodeIcon } from '../components/SocialIcons';
 import confetti from 'canvas-confetti';
 import { portfolioData } from '../data/portfolioData';
 import '../css/Hero.css';
 
-// Import local photos generated
-import kavinduStudio from '../assets/kavindu-studio.png';
+// Import primary profile photo
 import kavinduPortrait from '../assets/kavindu-portrait.jpg';
-import kavinduRaw from '../assets/kavindu.jpg';
 
 export default function Hero({ onOpenHireModal, onDownloadCV }) {
   const { personal } = portfolioData;
-  const [photoStyle, setPhotoStyle] = useState('studio'); // 'studio', 'portrait', 'raw'
 
   const handleDownloadCVClick = () => {
     // Trigger celebratory confetti
@@ -30,10 +26,6 @@ export default function Hero({ onOpenHireModal, onDownloadCV }) {
 
     onDownloadCV();
   };
-
-  const currentPhotoSrc = 
-    photoStyle === 'studio' ? kavinduStudio :
-    photoStyle === 'portrait' ? kavinduPortrait : kavinduRaw;
 
   return (
     <section id="home" className="hero-section">
@@ -126,30 +118,21 @@ export default function Hero({ onOpenHireModal, onDownloadCV }) {
             </button>
           </div>
 
-          {/* Floating Stats Card matching the design screenshot */}
+          {/* Floating Stats Card */}
           <div className="hero-stats-card glass-card">
-            <div className="stat-column">
-              <span className="stat-number">5+</span>
-              <span className="stat-label">Experiences</span>
-            </div>
-
-            <div className="stat-divider" />
-
-            <div className="stat-column">
-              <span className="stat-number">20+</span>
-              <span className="stat-label">Project done</span>
-            </div>
-
-            <div className="stat-divider" />
-
-            <div className="stat-column">
-              <span className="stat-number">80+</span>
-              <span className="stat-label">Happy Clients</span>
-            </div>
+            {personal.stats.map((stat, idx) => (
+              <React.Fragment key={idx}>
+                {idx > 0 && <div className="stat-divider" />}
+                <div className="stat-column">
+                  <span className="stat-number">{stat.number}</span>
+                  <span className="stat-label">{stat.label}</span>
+                </div>
+              </React.Fragment>
+            ))}
           </div>
         </div>
 
-        {/* Right Column: Visual Portrait Disc matching the design */}
+        {/* Right Column: Clean Visual Portrait Disc */}
         <div className="hero-visual">
           <div className="hero-circle-backdrop">
             {/* Ambient Orange Glow behind the disc */}
@@ -158,49 +141,10 @@ export default function Hero({ onOpenHireModal, onDownloadCV }) {
             {/* Main Dark Disc */}
             <div className="portrait-circle-frame">
               <img 
-                src={currentPhotoSrc} 
+                src={kavinduPortrait} 
                 alt="Kavindu Heshan - Software Engineer" 
-                className={`hero-real-photo ${photoStyle}`}
+                className="hero-real-photo"
               />
-            </div>
-
-            {/* Floating Floating Pill: Code Architect */}
-            <div className="floating-badge badge-top-right">
-              <div className="badge-icon-box">
-                <Terminal size={16} />
-              </div>
-              <div className="badge-text-box">
-                <span className="badge-subtitle">Specialist</span>
-                <span className="badge-title">Full-Stack Engineer</span>
-              </div>
-            </div>
-
-            {/* Floating Pill: Available */}
-            <div className="floating-badge badge-bottom-left">
-              <span className="status-indicator-dot" />
-              <span className="badge-status-text">Available for Projects</span>
-            </div>
-
-            {/* Image Style Toggle Switcher */}
-            <div className="photo-style-switcher" title="Toggle photo presentation style">
-              <button 
-                className={`style-pill ${photoStyle === 'studio' ? 'active' : ''}`}
-                onClick={() => setPhotoStyle('studio')}
-              >
-                Studio Tone
-              </button>
-              <button 
-                className={`style-pill ${photoStyle === 'portrait' ? 'active' : ''}`}
-                onClick={() => setPhotoStyle('portrait')}
-              >
-                Portrait Crop
-              </button>
-              <button 
-                className={`style-pill ${photoStyle === 'raw' ? 'active' : ''}`}
-                onClick={() => setPhotoStyle('raw')}
-              >
-                Full Photo
-              </button>
             </div>
           </div>
         </div>

@@ -4,8 +4,9 @@
 
 .contact-section {
   position: relative;
-  background: #0d0d11;
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  background: rgba(13, 13, 17, 0.65);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .contact-grid {

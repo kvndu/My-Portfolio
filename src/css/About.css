@@ -4,7 +4,7 @@
 
 .about-section {
   position: relative;
-  background: #111115;
+  background: transparent;
 }
 
 .about-grid {
@@ -296,6 +296,46 @@
   font-size: 0.9rem;
   color: #ff5e14;
   font-weight: 600;
+}
+
+.edu-modules-list {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.edu-modules-title {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.edu-modules-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.edu-modules-list li {
+  font-size: 0.86rem;
+  color: #c4c4cc;
+  position: relative;
+  padding-left: 16px;
+  line-height: 1.45;
+}
+
+.edu-modules-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent-orange);
 }
 
 /* Responsive */

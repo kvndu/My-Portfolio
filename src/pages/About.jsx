@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
   BookOpen, 
-  Briefcase, 
+  GraduationCap, 
   CheckCircle, 
   Download 
 } from 'lucide-react';
@@ -84,11 +84,11 @@ export default function About({ onDownloadCV }) {
               ))}
             </div>
 
-            {/* Career Timeline */}
+            {/* Academic & Projects Timeline */}
             <div className="timeline-container">
               <div className="timeline-header">
-                <Briefcase size={20} className="timeline-header-icon" />
-                <h3 className="timeline-heading">Professional Journey</h3>
+                <GraduationCap size={22} className="timeline-header-icon" />
+                <h3 className="timeline-heading">Academic & Project Journey</h3>
               </div>
 
               <div className="timeline-track">
@@ -123,6 +123,16 @@ export default function About({ onDownloadCV }) {
                 </div>
               </div>
               <p className="edu-achievement">{education[0].achievement}</p>
+              {education[0].notableModules && (
+                <div className="edu-modules-list">
+                  <span className="edu-modules-title">Academic Highlights & Key Modules:</span>
+                  <ul>
+                    {education[0].notableModules.map((mod, i) => (
+                      <li key={i}>{mod}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
         </div>

@@ -1,20 +1,26 @@
 export const portfolioData = {
   personal: {
+    fullName: "Karunakalage Kavindu Heshan De Silva",
     name: "Kavindu Heshan",
     firstName: "Kavindu",
-    greeting: "Hi I am",
-    role: "Software Engineer",
-    subRoles: ["Full Stack Developer", "Backend Architect", "React & Node.js Specialist"],
-    tagline: "I build robust, high-performance web applications and scalable backend systems with clean architecture and modern user experiences.",
-    location: "Colombo, Sri Lanka (Available for Remote Work Worldwide)",
+    greeting: "Hi, I am",
+    role: "Software Engineering Graduate",
+    subRoles: [
+      "BSc (Hons) Graduate • University of Plymouth",
+      "Full-Stack Web Developer",
+      "React & Node.js Developer",
+      "Associate Software Engineer Candidate"
+    ],
+    tagline: "BSc (Hons) Software Engineering graduate from the University of Plymouth. Passionate about building robust full-stack applications, scalable backend systems, and modern web solutions with clean code principles.",
+    location: "Colombo, Sri Lanka (Available for Remote & Onsite Roles Worldwide)",
     email: "kavindu.heshan.dev@gmail.com",
     phone: "+94 77 123 4567",
     whatsapp: "https://wa.me/94771234567",
     availableForHire: true,
     stats: [
-      { number: "3+", label: "Years Experience", description: "In software engineering & full-stack development" },
-      { number: "25+", label: "Projects Completed", description: "Delivered on time with production-grade quality" },
-      { number: "99%", label: "Happy Clients", description: "Positive client feedback and repeat collaborations" }
+      { number: "BSc", label: "Software Eng.", description: "BSc (Hons) - University of Plymouth" },
+      { number: "10+", label: "Projects Built", description: "Capstone, group & individual software projects" },
+      { number: "100%", label: "Ready to Work", description: "Open for Associate / Junior Software Engineer roles" }
     ],
     socials: [
       { name: "LinkedIn", url: "https://linkedin.com/in/kavindu-heshan", icon: "Linkedin" },
@@ -26,22 +32,24 @@ export const portfolioData = {
   },
 
   about: {
-    headline: "Transforming Complex Logic Into Elegant, Scalable Software",
-    bio1: "I am a dedicated Software Engineer with a deep passion for writing clean, efficient, and maintainable code. With solid experience spanning modern frontend frameworks and high-throughput backend services, I bridge the gap between user experience and architectural robustness.",
-    bio2: "Whether developing complex real-time applications with React and WebSockets, designing microservices architectures with Node.js/NestJS, or optimizing PostgreSQL queries for high concurrency, I take ownership of the end-to-end development cycle.",
+    headline: "Transforming Engineering Principles Into Robust, Scalable Software",
+    bio1: "I am a fresh BSc (Hons) Software Engineering graduate from the University of Plymouth (UK) with a solid academic foundation and practical project experience spanning modern full-stack web development, software design patterns, and developer tooling.",
+    bio2: "Throughout my degree, I completed 360 credits across rigorous technical modules. A major highlight was my Final Year Computing Project (PUSL3190), where I achieved 71% in coursework report & source code. Having successfully delivered full-stack web applications, mobile projects, and collaborative group software, I am eager to contribute to production-grade engineering teams as an Associate / Junior Software Engineer.",
     highlights: [
-      { title: "Clean Code & Architecture", desc: "Committed to SOLID principles, design patterns, and maintainable codebases." },
-      { title: "Full-Stack Proficiency", desc: "Seamless flow from responsive UI components to database schema design." },
-      { title: "Performance Driven", desc: "Obsessed with fast load times, query optimization, and low-latency APIs." },
-      { title: "Continuous Delivery", desc: "Automated testing, Docker containerization, and modern CI/CD pipelines." }
+      { title: "Strong Academic Foundations", desc: "Thorough grounding in OOP, Data Structures, Algorithms, Software Architecture, and Agile practices." },
+      { title: "Full-Stack Web Proficiency", desc: "Hands-on experience building reactive React frontends and structured RESTful Node.js / Express APIs." },
+      { title: "Agile Team Collaboration", desc: "Demonstrated teamwork in the Computing Group Project (achieved 75% coursework portfolio)." },
+      { title: "Rapid Learner & Problem Solver", desc: "Driven to master new tech stacks, modern CI/CD pipelines, containerization, and cloud services." }
     ],
     details: [
-      { label: "Full Name", value: "Kavindu Heshan" },
-      { label: "Specialization", value: "Software Engineering & Full Stack" },
-      { label: "Degree", value: "B.Sc. (Hons) in Software Engineering" },
-      { label: "Status", value: "Open for Full-time / Freelance Contracts" },
+      { label: "Full Name", value: "Karunakalage Kavindu Heshan De Silva" },
+      { label: "Degree", value: "BSc (Hons) Software Engineering" },
+      { label: "University", value: "University of Plymouth (UK)" },
+      { label: "Awarded", value: "Second Class Honours (Lower Division)" },
+      { label: "Enrolment Status", value: "Completed (2026)" },
+      { label: "Target Roles", value: "Associate / Junior Software Engineer" },
       { label: "Languages", value: "English (Fluent), Sinhala (Native)" },
-      { label: "Location", value: "Sri Lanka (UTC+05:30)" }
+      { label: "Location", value: "Colombo, Sri Lanka (Available Remote / Onsite)" }
     ]
   },
 
@@ -49,187 +57,181 @@ export const portfolioData = {
     {
       id: "fullstack",
       title: "Full-Stack Web Development",
-      description: "End-to-end web applications built with React, Next.js, Node.js, and TypeScript. Fast, reactive, responsive, and SEO-optimized.",
+      description: "Developing modern, reactive web applications using React, JavaScript/TypeScript, Node.js, and clean CSS styling.",
       icon: "Layers",
-      deliverables: ["Modern SPA & SSR Apps", "Responsive Mobile-First UI", "State Management (Redux/Zustand)", "Secure Authentication & Roles"],
+      deliverables: ["Modern Single Page Applications (SPAs)", "Responsive & Mobile-First UI Design", "Frontend State Management", "Clean, Modular Architecture"],
       popular: true
     },
     {
       id: "backend",
-      title: "Backend & API Architecture",
-      description: "Robust RESTful & GraphQL microservices engineered for high concurrency, fault tolerance, and secure data flow.",
+      title: "Backend & RESTful APIs",
+      description: "Engineering secure, scalable server-side REST APIs with Node.js, Express, and modern middleware.",
       icon: "Server",
-      deliverables: ["REST & GraphQL APIs", "Microservices & Event-Driven Systems", "Third-party Integrations & Webhooks", "API Rate Limiting & Security"],
+      deliverables: ["RESTful API Architecture & Endpoints", "JWT Authentication & Role Control", "Third-party API & Webhook Integration", "Data Validation & Error Handling"],
       popular: false
     },
     {
       id: "database",
-      title: "Database Design & Optimization",
-      description: "Relational and NoSQL database modeling, query tuning, indexing, and caching layers with PostgreSQL, MongoDB, and Redis.",
+      title: "Database Design & Management",
+      description: "Relational and NoSQL database modeling, SQL queries, schema normalization, and integration.",
       icon: "Database",
-      deliverables: ["Relational (PostgreSQL / MySQL)", "NoSQL (MongoDB)", "In-memory Caching (Redis)", "Data Migration & Schema Tuning"],
+      deliverables: ["Relational Databases (PostgreSQL / MySQL)", "NoSQL Databases (MongoDB)", "ORM / ODM Integration (Prisma / Mongoose)", "Schema Design & Normalization"],
       popular: false
     },
     {
-      id: "devops",
-      title: "DevOps & Cloud Deployment",
-      description: "Dockerized containerization, cloud hosting on AWS/Vercel/Render, and automated CI/CD deployment pipelines.",
+      id: "mobile-tools",
+      title: "Mobile & Software Tooling",
+      description: "Mobile app development foundations, version control workflows, containerization basics, and testing.",
       icon: "Cpu",
-      deliverables: ["Docker & Multi-stage Builds", "CI/CD with GitHub Actions", "Cloud Provisioning (AWS / VPS)", "Monitoring & Health Checks"],
+      deliverables: ["Mobile Application Development", "Git & GitHub Version Control", "Docker Containerization Basics", "Agile & Scrum Project Workflows"],
       popular: false
     }
   ],
 
   skills: {
     frontend: [
-      { name: "React.js", level: 95 },
-      { name: "JavaScript (ES6+)", level: 95 },
-      { name: "TypeScript", level: 88 },
-      { name: "Next.js", level: 85 },
+      { name: "React.js", level: 90 },
+      { name: "JavaScript (ES6+)", level: 92 },
       { name: "HTML5 & Modern CSS", level: 95 },
-      { name: "Tailwind CSS & Vanilla CSS", level: 92 },
-      { name: "Redux / Zustand", level: 88 }
+      { name: "TypeScript", level: 80 },
+      { name: "Tailwind CSS & Vanilla CSS", level: 88 },
+      { name: "Responsive Web Design", level: 94 }
     ],
     backend: [
-      { name: "Node.js", level: 92 },
-      { name: "Express.js", level: 90 },
-      { name: "NestJS", level: 84 },
-      { name: "RESTful APIs", level: 96 },
-      { name: "GraphQL", level: 80 },
-      { name: "Python / FastAPI", level: 78 },
-      { name: "Java / Spring Boot Basics", level: 75 }
+      { name: "Node.js", level: 88 },
+      { name: "Express.js", level: 88 },
+      { name: "RESTful APIs", level: 92 },
+      { name: "Python Basics", level: 75 },
+      { name: "Java (OOP Foundations)", level: 78 }
     ],
     database: [
-      { name: "PostgreSQL", level: 90 },
-      { name: "MongoDB", level: 88 },
-      { name: "Redis", level: 84 },
-      { name: "MySQL", level: 86 },
-      { name: "Prisma / TypeORM / Mongoose", level: 89 }
+      { name: "PostgreSQL", level: 82 },
+      { name: "MySQL", level: 85 },
+      { name: "MongoDB", level: 80 },
+      { name: "Database Schema Design", level: 86 }
     ],
     devops: [
-      { name: "Git & GitHub", level: 95 },
-      { name: "Docker", level: 85 },
-      { name: "CI/CD (GitHub Actions)", level: 82 },
-      { name: "AWS (S3, EC2, IAM)", level: 78 },
-      { name: "Linux / Bash", level: 85 },
-      { name: "Postman / Swagger", level: 92 }
+      { name: "Git & GitHub", level: 92 },
+      { name: "Docker Basics", level: 75 },
+      { name: "Postman / API Testing", level: 90 },
+      { name: "Agile & Scrum Methodologies", level: 88 },
+      { name: "Linux / Bash Basics", level: 78 }
     ]
   },
 
   projects: [
     {
       id: 1,
-      title: "NexusFlow - Distributed Task & Workflow Engine",
+      title: "Final Year Capstone Computing Project",
       category: "Full Stack",
       featured: true,
-      description: "A high-performance workflow orchestrator with real-time job execution tracking, queue management, and automated retries.",
-      techStack: ["React", "Node.js", "Redis BullMQ", "PostgreSQL", "Docker", "TailwindCSS"],
-      liveDemo: "https://nexusflow-demo.example.com",
-      github: "https://github.com/kavindu-heshan/nexus-flow",
-      stats: { throughput: "10k req/s", uptime: "99.98%" }
+      description: "University of Plymouth final year capstone software engineering project (PUSL3190). Scored 71% in project report & source code. Features complete end-to-end architecture, robust backend APIs, and modern responsive UI.",
+      techStack: ["React", "Node.js", "Express", "PostgreSQL", "REST APIs", "Git"],
+      liveDemo: "#",
+      github: "https://github.com/kavindu-heshan",
+      stats: { courseworkScore: "71% First Class", overallModule: "66.2%" }
     },
     {
       id: 2,
-      title: "PulsePay - Merchant Payment & Analytics Gateway",
-      category: "Backend / API",
+      title: "Collaborative Computing Group Project",
+      category: "Full Stack",
       featured: true,
-      description: "Secure payment processing gateway integrating multiple payment providers with webhook verification, encrypted ledgers, and revenue dashboards.",
-      techStack: ["TypeScript", "NestJS", "React", "Stripe API", "PostgreSQL", "Prisma"],
-      liveDemo: "https://pulsepay-demo.example.com",
-      github: "https://github.com/kavindu-heshan/pulse-pay",
-      stats: { latency: "< 45ms", security: "PCI-DSS Compliant" }
+      description: "Agile team project developed during Stage 2 at University of Plymouth (PUSL2021). Achieved 72% overall and 75% in the coursework portfolio. Engineered a modular system with team version control and sprint tracking.",
+      techStack: ["React", "Node.js", "MongoDB", "Agile/Scrum", "Git"],
+      liveDemo: "#",
+      github: "https://github.com/kavindu-heshan",
+      stats: { portfolioScore: "75%", moduleResult: "72%" }
     },
     {
       id: 3,
-      title: "DevSphere - Collaborative Cloud Code Editor",
-      category: "Full Stack",
+      title: "Mobile Application Development Project",
+      category: "Frontend",
       featured: true,
-      description: "Browser-based collaborative development environment featuring real-time peer editing, live terminal emulation, and code execution sandboxes.",
-      techStack: ["React", "WebSockets", "Monaco Editor", "Node.js", "Docker Sandbox"],
-      liveDemo: "https://devsphere-demo.example.com",
-      github: "https://github.com/kavindu-heshan/devsphere",
-      stats: { concurrency: "50+ peers/room", sync: "Sub-10ms" }
+      description: "Stage 2 mobile engineering project (PUSL2023) scored 65.58% (76% Proposal, 70% Final Report, 69.5% Presentation). Built a user-friendly mobile experience with offline data persistence and responsive layouts.",
+      techStack: ["Mobile Tech", "Java / Android", "UI/UX", "REST APIs"],
+      liveDemo: "#",
+      github: "https://github.com/kavindu-heshan",
+      stats: { proposal: "76%", finalReport: "70%" }
     },
     {
       id: 4,
-      title: "CloudGuard - Serverless Infrastructure Monitor",
-      category: "DevOps & Cloud",
+      title: "NexusFlow - Task & Workflow Engine",
+      category: "Full Stack",
       featured: false,
-      description: "Automated telemetry monitor that aggregates cloud metrics, detects abnormal spikes, and sends alerts via Slack/Discord webhooks.",
-      techStack: ["React", "FastAPI", "Python", "AWS CloudWatch", "Redis", "Chart.js"],
-      liveDemo: "https://cloudguard-demo.example.com",
-      github: "https://github.com/kavindu-heshan/cloud-guard",
-      stats: { metrics: "500k data points/day", alerts: "Instant" }
+      description: "A workflow orchestrator with real-time job execution tracking, queue management, and modular architecture inspired by enterprise backend systems.",
+      techStack: ["React", "Node.js", "Redis", "PostgreSQL", "TailwindCSS"],
+      liveDemo: "#",
+      github: "https://github.com/kavindu-heshan",
+      stats: { tech: "Full Stack", architecture: "Clean Code" }
     },
     {
       id: 5,
-      title: "AuraStore - Ultra-Fast Headless E-Commerce",
-      category: "Frontend",
+      title: "IoT Sensor & Telemetry Dashboard",
+      category: "DevOps & Cloud",
       featured: false,
-      description: "Blazing fast headless e-commerce storefront with instant client-side filtering, cart sync, sleek micro-animations, and Stripe checkout.",
-      techStack: ["Next.js", "React", "Tailwind CSS", "Zustand", "Stripe Checkout"],
-      liveDemo: "https://aurastore-demo.example.com",
-      github: "https://github.com/kavindu-heshan/aura-store",
-      stats: { lighthouse: "100/100", bundle: "< 95kb" }
+      description: "Developed as part of the Introduction to IoT module (PUSL2022) with a 65% final report score. Aggregates telemetry data from connected sensors with real-time graphical visualization.",
+      techStack: ["IoT Protocols", "Python", "JavaScript", "REST APIs"],
+      liveDemo: "#",
+      github: "https://github.com/kavindu-heshan",
+      stats: { coursework: "65%", focus: "IoT & Visuals" }
     },
     {
       id: 6,
-      title: "HealthSync - Smart Telemedicine & Clinic SaaS",
-      category: "Full Stack",
+      title: "AuraStore - Modern E-Commerce Platform",
+      category: "Frontend",
       featured: false,
-      description: "Multi-tenant clinic management system with encrypted patient history, prescription generator, WebRTC video consultation, and SMS notifications.",
-      techStack: ["React", "Node.js", "MongoDB", "WebRTC", "Twilio API"],
-      liveDemo: "https://healthsync-demo.example.com",
-      github: "https://github.com/kavindu-heshan/health-sync",
-      stats: { doctors: "120+ active", consultations: "5,000+" }
+      description: "Full-featured modern e-commerce storefront with intuitive product catalog filtering, interactive cart management, responsive design, and checkout workflow.",
+      techStack: ["React", "JavaScript (ES6+)", "Tailwind CSS", "Context API"],
+      liveDemo: "#",
+      github: "https://github.com/kavindu-heshan",
+      stats: { responsiveness: "100%", performance: "Optimized" }
     }
   ],
 
+  // Academic & Practical Milestones (Accurately reflects education journey with no fake jobs)
   experience: [
     {
-      period: "2024 - Present",
-      role: "Software Engineer",
-      company: "InnovateX Solutions",
-      description: "Lead developer on core web platforms and microservices. Architected API gateways, reduced server response times by 38%, and mentored junior engineers.",
-      tech: ["React", "TypeScript", "Node.js", "PostgreSQL", "Docker", "AWS"]
+      period: "2025 - 2026",
+      role: "BSc (Hons) Software Engineering — Stage 3 (Final Year)",
+      company: "University of Plymouth",
+      description: "Completed Level 6 advanced curriculum comprising Full-Stack Development (PUSL3120), HCI & Computer Graphics (PUSL3122), AI & Machine Learning (PUSL3123), and Software Project Management (PUSL3134). Built an individual Capstone Computing Project (PUSL3190) scoring 71% in project report & source code.",
+      highlights: ["71% in Capstone Project Report & Code", "Level 6 Full-Stack Development", "Agile Project Management"],
+      tech: ["React", "Node.js", "PostgreSQL", "Full-Stack Dev", "AI/ML", "Agile SPM"]
+    },
+    {
+      period: "2024 - 2025",
+      role: "BSc (Hons) Software Engineering — Stage 2",
+      company: "University of Plymouth",
+      description: "Completed 120 credits across core practical engineering modules: Computing Group Project (72% overall, 75% coursework portfolio), Mobile App Development (65.58%), Software Engineering 2 (74% coursework & practical), Introduction to IoT (65% coursework), and Information Management & Retrieval.",
+      highlights: ["75% in Group Project Portfolio", "74% in Software Engineering 2 Coursework", "Mobile App Development"],
+      tech: ["Mobile Dev", "Group Computing", "Java", "Databases / SQL", "IoT", "Git"]
     },
     {
       period: "2023 - 2024",
-      role: "Associate Software Engineer",
-      company: "Apex Technologies",
-      description: "Engineered scalable REST APIs and modern React frontends. Implemented automated testing suites increasing test coverage from 45% to 88%.",
-      tech: ["React", "Node.js", "Express", "MongoDB", "Jest", "Git"]
-    },
-    {
-      period: "2022 - 2023",
-      role: "Software Engineering Intern",
-      company: "CodeGen Labs",
-      description: "Collaborated in an Agile Scrum team building internal dashboard tools, client portals, and responsive UI components with clean design standards.",
-      tech: ["JavaScript", "React", "CSS3", "REST APIs", "PostgreSQL"]
+      role: "Software Engineering Foundations — Stage 1",
+      company: "University of Plymouth",
+      description: "Achieved 120 Level 4 credits (AP standing) establishing core computing foundations in Object-Oriented Programming, Data Structures, Algorithms, Computer Architecture, and Modern Web Basics.",
+      highlights: ["120 Credits Achieved", "Core Programming & OOP", "Algorithms & Data Structures"],
+      tech: ["Java", "OOP", "Data Structures", "Algorithms", "Web Fundamentals"]
     }
   ],
 
   education: [
     {
-      degree: "B.Sc. (Hons) in Software Engineering",
-      institution: "Faculty of Computing & Technology",
-      year: "2020 - 2024",
-      achievement: "First Class Honours | Dean's List for Academic Excellence"
-    }
-  ],
-
-  testimonials: [
-    {
-      quote: "Kavindu is an exceptional software engineer. His ability to translate complex backend workflows into seamless, bulletproof systems was pivotal to our platform launch.",
-      author: "Ruwan Jayasinghe",
-      role: "Engineering Director",
-      company: "InnovateX Solutions"
-    },
-    {
-      quote: "Working with Kavindu was effortless. He has a rare combination of rock-solid coding principles and keen design sense. Delivered well ahead of schedule!",
-      author: "Sarah Jenkins",
-      role: "Product Manager",
-      company: "CloudScale Inc."
+      degree: "BSc (Hons) in Software Engineering",
+      institution: "University of Plymouth (UK)",
+      year: "2023 - 2026 (Completed)",
+      classification: "Second Class Honours (Lower Division)",
+      aggregate: "57.35%",
+      totalCredits: "360 Credits Completed",
+      achievement: "Awarded: Second Class Honours (Lower Division) • 360 Academic Credits",
+      notableModules: [
+        "Final Year Computing Project (71% Coursework Report & Code)",
+        "Computing Group Project (75% Coursework Portfolio, 72% Overall)",
+        "Mobile App Development (65.58%)",
+        "Software Engineering 2 (74% Coursework & Practical)",
+        "Full-Stack Development & Agile Software Project Management"
+      ]
     }
   ]
 };
